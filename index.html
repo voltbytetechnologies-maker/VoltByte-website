@@ -4,7 +4,29 @@
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="xzeZjx9u12M6utILMS7gjpD4gaNzDC6L6FDOU3g2ckM" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VoltByte Technologies</title>
+<title>VoltByte Technologies | MEP, Electrical, CCTV & Access Control Solutions</title>
+<meta name="description" content="VoltByte Technologies provides expert MEP, Fire Fighting, HVAC, Electrical, CCTV surveillance, and Access Control solutions for industrial and commercial projects.">
+<meta name="keywords" content="VoltByte Technologies, MEP services, fire fighting systems, HVAC solutions, electrical services, CCTV installation, access control, cable tray, distribution board, biometric access, industrial electrical, surveillance systems">
+<meta name="author" content="VoltByte Technologies">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voltbytetech.in/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="VoltByte Technologies | MEP, Electrical, CCTV & Access Control Solutions">
+<meta property="og:description" content="Expert MEP, Fire Fighting, HVAC, Electrical, CCTV surveillance, and Access Control solutions for industrial and commercial projects.">
+<meta property="og:image" content="https://voltbytetech.in/logo.png">
+<meta property="og:url" content="https://voltbytetech.in/">
+<meta property="og:site_name" content="VoltByte Technologies">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VoltByte Technologies | MEP, Electrical, CCTV & Access Control Solutions">
+<meta name="twitter:description" content="Expert MEP, Fire Fighting, HVAC, Electrical, CCTV surveillance, and Access Control solutions.">
+<meta name="twitter:image" content="https://voltbytetech.in/logo.png">
+
+<link rel="icon" type="image/png" href="logo.png">
 
 <style>
 body {
@@ -52,12 +74,16 @@ nav a:hover {
   padding: 80px 20px;
 }
 
-.hero button {
+.hero a {
+  display: inline-block;
   padding: 10px 20px;
   border: none;
   background: white;
   color: #007BFF;
   cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 /* Section */
@@ -86,25 +112,40 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+.box img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
 /* Gallery */
-.gallery img {
+.gallery-section {
+  margin-bottom: 30px;
+}
+
+.gallery-section h3 {
+  color: #0a1f44;
+  margin-bottom: 15px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-grid img {
   width: 300px;
+  height: 220px;
+  object-fit: cover;
   margin: 10px;
   border-radius: 10px;
 }
 
-/* Contact Form */
-form input, form textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px;
-}
-
-form button {
-  padding: 10px 20px;
-  background: #007BFF;
-  color: white;
-  border: none;
+/* Contact */
+.contact-info p {
+  font-size: 1.1em;
+  margin: 8px 0;
 }
 
 /* Footer */
@@ -130,76 +171,150 @@ footer {
     align-items: center;
   }
 
-  .gallery img {
+  .gallery-grid img {
     width: 90%;
   }
 }
 </style>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "VoltByte Technologies",
+  "description": "Expert MEP, Fire Fighting, HVAC, Electrical, CCTV surveillance, and Access Control solutions.",
+  "email": "voltbytetechnologies@gmail.com",
+  "telephone": "+917310330007",
+  "image": "https://voltbytetech.in/logo.png",
+  "url": "https://voltbytetech.in/",
+  "serviceType": ["MEP Services", "Fire Fighting Systems", "HVAC Solutions", "Electrical Services", "CCTV Installation", "Access Control Systems"]
+}
+</script>
 </head>
 
 <body>
 
 <header>
   <div class="logo">
-    <img src="logo.png">
+    <img src="logo.png" alt="VoltByte Technologies Logo">
     <h2>VoltByte Technologies</h2>
   </div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<div class="hero">
+<div class="hero" id="home">
   <h1>Powering Engineering Solutions</h1>
-  <p>MEP | Fire Fighting | HVAC | Electrical</p>
-  <button>Contact Us</button>
+  <p>MEP | Fire Fighting | HVAC | Electrical | CCTV | Access Control</p>
+  <a href="mailto:voltbytetechnologies@gmail.com">Contact Us</a>
 </div>
 
-<div class="section">
+<div class="section" id="services">
   <h2>Our Services</h2>
   <div class="services">
+    <div class="box">
+      <img src="asset/cctv1.jpeg" alt="CCTV Surveillance System">
+      <h3>CCTV Surveillance</h3>
+      <p>Complete CCTV installation and monitoring solutions</p>
+    </div>
+    <div class="box">
+      <img src="asset/Access Control.jpeg" alt="Access Control System">
+      <h3>Access Control</h3>
+      <p>Biometric and electronic access control systems</p>
+    </div>
+    <div class="box">
+      <img src="asset/cabletray1.jpeg" alt="Cable Tray Installation">
+      <h3>Cable Tray</h3>
+      <p>Industrial cable tray installation and management</p>
+    </div>
+    <div class="box">
+      <img src="asset/db1.jpeg" alt="Distribution Board">
+      <h3>Distribution Board</h3>
+      <p>Electrical distribution board setup and wiring</p>
+    </div>
     <div class="box">
       <h3>Fire Fighting</h3>
       <p>Complete fire protection systems</p>
     </div>
     <div class="box">
       <h3>HVAC</h3>
-      <p>Heating & cooling solutions</p>
+      <p>Heating &amp; cooling solutions</p>
     </div>
     <div class="box">
+      <img src="asset/rack.jpeg" alt="Server Rack Installation">
       <h3>Electrical</h3>
       <p>Industrial electrical services</p>
     </div>
   </div>
 </div>
 
-<div class="section gallery">
+<div class="section" id="gallery">
   <h2>Our Projects</h2>
-  <img src="project1.jpg">
-  <img src="project2.jpg">
-  <img src="project3.jpg">
+
+  <div class="gallery-section">
+    <h3>CCTV Surveillance</h3>
+    <div class="gallery-grid">
+      <img src="asset/cctv (1).jpeg" alt="CCTV Installation Project 1">
+      <img src="asset/cctv1.jpeg" alt="CCTV Installation Project 2">
+      <img src="asset/cctv2.jpeg" alt="CCTV Installation Project 3">
+      <img src="asset/cctv3.jpeg" alt="CCTV Installation Project 4">
+      <img src="asset/cctv5.jpeg" alt="CCTV Installation Project 5">
+      <img src="asset/cctv6.jpeg" alt="CCTV Installation Project 6">
+      <img src="asset/cctv6 (1).jpeg" alt="CCTV Installation Project 7">
+      <img src="asset/cctv7.jpeg" alt="CCTV Installation Project 8">
+      <img src="asset/cctv8.jpeg" alt="CCTV Installation Project 9">
+    </div>
+  </div>
+
+  <div class="gallery-section">
+    <h3>Access Control &amp; Biometric</h3>
+    <div class="gallery-grid">
+      <img src="asset/Access Control.jpeg" alt="Access Control System">
+      <img src="asset/access1.jpeg" alt="Access Control Installation 1">
+      <img src="asset/access2.jpeg" alt="Access Control Installation 2">
+      <img src="asset/access3.jpeg" alt="Access Control Installation 3">
+      <img src="asset/biometric-.jpg" alt="Biometric Access System">
+    </div>
+  </div>
+
+  <div class="gallery-section">
+    <h3>Cable Tray</h3>
+    <div class="gallery-grid">
+      <img src="asset/cabletray1.jpeg" alt="Cable Tray Installation 1">
+      <img src="asset/cabletray3.jpeg" alt="Cable Tray Installation 2">
+      <img src="asset/cabletray4.jpeg" alt="Cable Tray Installation 3">
+    </div>
+  </div>
+
+  <div class="gallery-section">
+    <h3>Distribution Board &amp; Electrical</h3>
+    <div class="gallery-grid">
+      <img src="asset/db1.jpeg" alt="Distribution Board 1">
+      <img src="asset/db2.jpeg" alt="Distribution Board 2">
+      <img src="asset/db3.jpeg" alt="Distribution Board 3">
+      <img src="asset/rack.jpeg" alt="Server Rack Installation">
+      <img src="asset/gland.jpeg" alt="Cable Gland Installation">
+      <img src="asset/pvc.jpeg" alt="PVC Conduit Work">
+      <img src="asset/motorized.jpeg" alt="Motorized System">
+      <img src="asset/download.jpeg" alt="Electrical Work">
+    </div>
+  </div>
 </div>
 
-<div class="section">
+<div class="section contact-info" id="contact">
   <h2>Contact Us</h2>
-  
-  <form>
-    <input type="text" placeholder="Your Name"><br>
-    <input type="email" placeholder="Your Email"><br>
-    <textarea placeholder="Your Message"></textarea><br>
-    <button>Send Message</button>
-  </form>
-
-  <p>Email: voltbytetechnologies@gmail.com</p>
-  <p>Phone: +91 7310330007</p>
+  <p>Email: <a href="mailto:voltbytetechnologies@gmail.com">voltbytetechnologies@gmail.com</a></p>
+  <p>Phone: <a href="tel:+917310330007">+91 7310330007</a></p>
 </div>
 
 <footer>
-  <p>© 2026 VoltByte Technologies</p>
+  <p>&copy; 2026 VoltByte Technologies. All rights reserved.</p>
 </footer>
 
 </body>
