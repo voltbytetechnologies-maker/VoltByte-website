@@ -35,17 +35,20 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Fetch current year from WorldTimeAPI and set in footer
+// Fetch current year from Google API and set in footer
 (function setCurrentYear() {
   const yearEl = document.getElementById('currentYear');
-  fetch('https://worldtimeapi.org/api/timezone/Asia/Kolkata')
-    .then(res => res.json())
-    .then(data => {
-      yearEl.textContent = new Date(data.datetime).getFullYear();
+  // Set fallback immediately so it's never empty
+  yearEl.textContent = new Date().getFullYear();
+  // Fetch from Google's API for server-verified time
+  fetch('https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=none')
+    .then(res => {
+      const dateHeader = res.headers.get('Date');
+      if (dateHeader) {
+        yearEl.textContent = new Date(dateHeader).getFullYear();
+      }
     })
-    .catch(() => {
-      yearEl.textContent = new Date().getFullYear();
-    });
+    .catch(() => {});
 })();
 
 // Header background on scroll
