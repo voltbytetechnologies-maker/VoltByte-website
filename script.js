@@ -35,21 +35,8 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Fetch current year from Google API and set in footer
-(function setCurrentYear() {
-  const yearEl = document.getElementById('currentYear');
-  // Set fallback immediately so it's never empty
-  yearEl.textContent = new Date().getFullYear();
-  // Fetch from Google's API for server-verified time
-  fetch('https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=none')
-    .then(res => {
-      const dateHeader = res.headers.get('Date');
-      if (dateHeader) {
-        yearEl.textContent = new Date(dateHeader).getFullYear();
-      }
-    })
-    .catch(() => {});
-})();
+// Set current year in footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 // Header background on scroll
 window.addEventListener('scroll', () => {
