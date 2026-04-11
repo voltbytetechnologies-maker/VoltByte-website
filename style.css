@@ -730,6 +730,12 @@ nav a:hover, nav a.active {
   color: var(--orange);
 }
 
+.contact-role {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
 /* ========== FOOTER ========== */
 footer {
   background: #061229;

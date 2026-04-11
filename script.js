@@ -35,6 +35,19 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// Fetch current year from WorldTimeAPI and set in footer
+(function setCurrentYear() {
+  const yearEl = document.getElementById('currentYear');
+  fetch('https://worldtimeapi.org/api/timezone/Asia/Kolkata')
+    .then(res => res.json())
+    .then(data => {
+      yearEl.textContent = new Date(data.datetime).getFullYear();
+    })
+    .catch(() => {
+      yearEl.textContent = new Date().getFullYear();
+    });
+})();
+
 // Header background on scroll
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
