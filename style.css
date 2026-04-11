@@ -20,7 +20,7 @@ body {
   --gray-light: #f5f7fa;
   --gray: #e8ecf1;
   --text-dark: #1a1a2e;
-  --text-muted: #6b7280;
+  --text-muted: #4b5563;
 }
 
 /* ========== HEADER ========== */
@@ -52,7 +52,8 @@ header {
   object-fit: contain;
 }
 
-.logo-text h2 {
+.logo-name {
+  display: block;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--white);
@@ -80,9 +81,11 @@ nav a {
   transition: all 0.3s;
 }
 
-nav a:hover, nav a.active {
+nav a:hover, nav a:focus, nav a.active {
   color: var(--white);
   background: rgba(255,255,255,0.1);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nav-cta {
@@ -103,6 +106,9 @@ nav a:hover, nav a.active {
   cursor: pointer;
   gap: 5px;
   z-index: 1001;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 .menu-toggle span {
   width: 28px;
@@ -171,7 +177,7 @@ nav a:hover, nav a.active {
 
 .hero .tagline {
   font-size: 1.15rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.9);
   font-weight: 300;
   margin-bottom: 36px;
   max-width: 600px;
@@ -232,7 +238,8 @@ nav a:hover, nav a.active {
   border-top: 1px solid rgba(255,255,255,0.15);
 }
 
-.hero-stat h3 {
+.hero-stat .stat-number {
+  display: block;
   font-size: 2rem;
   font-weight: 700;
   color: var(--orange);
@@ -240,7 +247,7 @@ nav a:hover, nav a.active {
 
 .hero-stat p {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.75);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -358,7 +365,7 @@ nav a:hover, nav a.active {
   border-top: 1px solid var(--gray);
 }
 
-.about-clients h4 {
+.about-clients .clients-heading {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -488,7 +495,7 @@ nav a:hover, nav a.active {
 }
 
 .projects-section .section-header p {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.75);
 }
 
 .projects-grid {
@@ -527,7 +534,7 @@ nav a:hover, nav a.active {
 
 .project-card p {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.75);
   line-height: 1.7;
 }
 
@@ -571,7 +578,7 @@ nav a:hover, nav a.active {
   font-size: 1.4rem;
 }
 
-.why-card h4 {
+.why-card h3 {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -628,6 +635,7 @@ nav a:hover, nav a.active {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s;
+  content-visibility: auto;
 }
 
 .gallery-item:hover img {
@@ -683,7 +691,7 @@ nav a:hover, nav a.active {
 
 .cta-content p {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.8);
   margin-bottom: 32px;
 }
 
@@ -720,7 +728,8 @@ nav a:hover, nav a.active {
 }
 
 .contact-item a {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.9);
+  text-underline-offset: 2px;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s;
@@ -732,14 +741,14 @@ nav a:hover, nav a.active {
 
 .contact-role {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.75);
   font-style: italic;
 }
 
 /* ========== FOOTER ========== */
 footer {
   background: #061229;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
   text-align: center;
   padding: 24px 5%;
   font-size: 0.85rem;
@@ -797,7 +806,7 @@ footer a {
   .hero h1 { font-size: 2.2rem; }
   .hero .tagline { font-size: 1rem; }
   .hero-stats { gap: 24px; flex-wrap: wrap; }
-  .hero-stat h3 { font-size: 1.5rem; }
+  .hero-stat .stat-number { font-size: 1.5rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-images { height: 350px; }

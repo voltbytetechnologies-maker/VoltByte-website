@@ -41,7 +41,14 @@
 <!-- Favicon & Icons -->
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Preconnect to Google Fonts for faster loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Non-render-blocking font loading -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+
 <link rel="stylesheet" href="style.css">
 
 <!-- Structured Data: Organization -->
@@ -162,18 +169,18 @@
 <!-- ========== HEADER ========== -->
 <header>
   <a href="#home" class="logo">
-    <img src="logo.png" alt="VoltByte Technologies Logo">
+    <img src="logo.png" alt="VoltByte Technologies Logo" width="45" height="45">
     <div class="logo-text">
-      <h2>VoltByte</h2>
+      <span class="logo-name">VoltByte</span>
       <span>Technologies</span>
     </div>
   </a>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 
-  <nav id="navMenu">
+  <nav id="navMenu" aria-label="Main navigation">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -182,6 +189,8 @@
     <a href="#contact" class="nav-cta">Contact Us</a>
   </nav>
 </header>
+
+<main>
 
 <!-- ========== HERO ========== -->
 <section class="hero" id="home">
@@ -195,15 +204,15 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <h3>50+</h3>
+        <span class="stat-number">50+</span>
         <p>Projects Completed</p>
       </div>
       <div class="hero-stat">
-        <h3>4+</h3>
+        <span class="stat-number">4+</span>
         <p>Major Clients</p>
       </div>
       <div class="hero-stat">
-        <h3>100%</h3>
+        <span class="stat-number">100%</span>
         <p>Quality Assurance</p>
       </div>
     </div>
@@ -215,8 +224,8 @@
   <div class="about-grid">
     <div class="about-images fade-in">
       <div class="about-accent"></div>
-      <img src="asset/rack.jpeg" alt="VoltByte Infrastructure Work" class="about-img-main" loading="lazy">
-      <img src="asset/cabletray3.jpeg" alt="Cable Tray Installation" class="about-img-secondary" loading="lazy">
+      <img src="asset/rack.jpeg" alt="VoltByte Infrastructure Work" class="about-img-main" loading="lazy" width="450" height="380">
+      <img src="asset/cabletray3.jpeg" alt="Cable Tray Installation" class="about-img-secondary" loading="lazy" width="330" height="250">
     </div>
     <div class="about-content fade-in">
       <div class="section-label">About Us</div>
@@ -224,7 +233,7 @@
       <p>VoltByte Technologies is a professional service provider with expertise in installation, commissioning, and maintenance of telecom, security, and electrical systems.</p>
       <p>With proven experience working on projects associated with leading companies, we bring practical industry knowledge and technical excellence to every assignment. Our goal is to deliver reliable, scalable, and cost-effective solutions that meet modern infrastructure needs.</p>
       <div class="about-clients">
-        <h4>Trusted By Industry Leaders</h4>
+        <h3 class="clients-heading">Trusted By Industry Leaders</h3>
         <div class="client-logos">
           <div class="client-tag">Tata Nelco Limited</div>
           <div class="client-tag">Bharti Airtel Limited</div>
@@ -332,23 +341,23 @@
   <div class="why-grid">
     <div class="why-card fade-in">
       <div class="why-icon">&#9989;</div>
-      <h4>End-to-End Execution</h4>
+      <h3>End-to-End Execution</h3>
     </div>
     <div class="why-card fade-in">
       <div class="why-icon">&#128736;</div>
-      <h4>Skilled Technical Team</h4>
+      <h3>Skilled Technical Team</h3>
     </div>
     <div class="why-card fade-in">
       <div class="why-icon">&#128737;</div>
-      <h4>Quality & Safety Assurance</h4>
+      <h3>Quality & Safety Assurance</h3>
     </div>
     <div class="why-card fade-in">
       <div class="why-icon">&#9203;</div>
-      <h4>On-Time Delivery</h4>
+      <h3>On-Time Delivery</h3>
     </div>
     <div class="why-card fade-in">
       <div class="why-icon">&#127981;</div>
-      <h4>Industrial Expertise</h4>
+      <h3>Industrial Expertise</h3>
     </div>
   </div>
 </section>
@@ -371,52 +380,52 @@
 
   <div class="gallery-grid" id="galleryGrid">
     <div class="gallery-item" data-category="cctv">
-      <img src="asset/cctv (1).jpeg" alt="CCTV Installation" loading="lazy">
+      <img src="asset/cctv (1).jpeg" alt="CCTV Installation" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="cctv">
-      <img src="asset/cctv1.jpeg" alt="CCTV Setup" loading="lazy">
+      <img src="asset/cctv1.jpeg" alt="CCTV Setup" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="cctv">
-      <img src="asset/cctv2.jpeg" alt="CCTV Project" loading="lazy">
+      <img src="asset/cctv2.jpeg" alt="CCTV Project" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="cctv">
-      <img src="asset/cctv3.jpeg" alt="CCTV Monitoring" loading="lazy">
+      <img src="asset/cctv3.jpeg" alt="CCTV Monitoring" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="access">
-      <img src="asset/Access Control.jpeg" alt="Access Control System" loading="lazy">
+      <img src="asset/Access Control.jpeg" alt="Access Control System" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="access">
-      <img src="asset/access1.jpeg" alt="Access Control Installation" loading="lazy">
+      <img src="asset/access1.jpeg" alt="Access Control Installation" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="access">
-      <img src="asset/biometric-.jpg" alt="Biometric Access System" loading="lazy">
+      <img src="asset/biometric-.jpg" alt="Biometric Access System" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="cable">
-      <img src="asset/cabletray1.jpeg" alt="Cable Tray Installation" loading="lazy">
+      <img src="asset/cabletray1.jpeg" alt="Cable Tray Installation" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="cable">
-      <img src="asset/cabletray3.jpeg" alt="Cable Tray Routing" loading="lazy">
+      <img src="asset/cabletray3.jpeg" alt="Cable Tray Routing" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="cable">
-      <img src="asset/cabletray4.jpeg" alt="Cable Tray Project" loading="lazy">
+      <img src="asset/cabletray4.jpeg" alt="Cable Tray Project" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="electrical">
-      <img src="asset/db1.jpeg" alt="Distribution Board" loading="lazy">
+      <img src="asset/db1.jpeg" alt="Distribution Board" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="electrical">
-      <img src="asset/db2.jpeg" alt="DB Panel" loading="lazy">
+      <img src="asset/db2.jpeg" alt="DB Panel" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="electrical">
-      <img src="asset/rack.jpeg" alt="Server Rack" loading="lazy">
+      <img src="asset/rack.jpeg" alt="Server Rack" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="electrical">
-      <img src="asset/gland.jpeg" alt="Cable Gland" loading="lazy">
+      <img src="asset/gland.jpeg" alt="Cable Gland" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="electrical">
-      <img src="asset/motorized.jpeg" alt="Motorized Valve System" loading="lazy">
+      <img src="asset/motorized.jpeg" alt="Motorized Valve System" loading="lazy" width="300" height="225">
     </div>
     <div class="gallery-item" data-category="electrical">
-      <img src="asset/pvc.jpeg" alt="PVC Conduit Work" loading="lazy">
+      <img src="asset/pvc.jpeg" alt="PVC Conduit Work" loading="lazy" width="300" height="225">
     </div>
   </div>
 </section>
@@ -449,12 +458,14 @@
   </div>
 </section>
 
+</main>
+
 <!-- ========== FOOTER ========== -->
 <footer>
   <p>&copy; <span id="currentYear"></span> <a href="#">VoltByte Technologies</a>. All rights reserved. | Powering Connectivity. Securing Infrastructure.</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 
 </body>
 </html>
