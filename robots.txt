@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /asset/
+
+Sitemap: https://voltbytetech.in/sitemap.xml
